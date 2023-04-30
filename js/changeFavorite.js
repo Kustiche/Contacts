@@ -1,4 +1,5 @@
-import { phonebook, modalIsFavorite } from "./view.js";
+import { phonebook } from "./main.js";
+import { modalIsFavorite } from "./view.js";
 
 export function changeFavorite() {
   const contacts = document.querySelectorAll('.contacts__contact');

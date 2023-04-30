@@ -1,4 +1,5 @@
-import { phonebook, modalName, modalNumber, modalIsFavorite } from "./view.js";
+import { modalName, modalNumber, modalIsFavorite, modalCategory } from "./view.js";
+import { phonebook } from "./main.js";
 
 export function renderModal(contact) {
   const contactName = contact.querySelector('.contacts__name');
@@ -8,6 +9,7 @@ export function renderModal(contact) {
 
   modalName.value = desiredContact.name;
   modalNumber.value = desiredContact.number;
+  modalCategory.value = desiredContact.category;
 
   modalIsFavorite.addEventListener('click', () => {
     if (!desiredContact.isFavorite) {
@@ -24,8 +26,4 @@ export function renderModal(contact) {
       isFavoriteContact.classList.remove('elected');
     };
   });
-
-  modalName.addEventListener('click', () => {
-
-  });
-}
+};

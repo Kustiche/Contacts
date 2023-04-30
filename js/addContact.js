@@ -1,4 +1,4 @@
-  import { phonebook } from "./view.js";
+  import { phonebook } from "./main.js";
 
 	export function addСontact(name, number, category, isFavorite) {
 	if (name === undefined || name === '') {

@@ -1,4 +1,5 @@
-import { phonebook, list } from "./view.js";
+import { phonebook } from "./main.js";
+import { list } from "./view.js";
 import { addDomContact } from "./addDomContact.js";
 import { showLetterAvatar } from "./showLetterAvatar.js";
 import { changeFavorite } from "./changeFavorite.js";
