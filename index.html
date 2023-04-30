@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contacts</title>
+</head>
+<body>
+  <section class="contacts">
+    <div class="contacts__container container">
+      <div class="contacts__wrap">
+        <div class="contacts__list">
+        </div>
+        <form class="form" action="#/">
+          <input class="form__input-name input" name="contact-name" id="name" type="text" placeholder="Имя контакта" required>
+          <input class="form__input-number input" name="contact-number" id="number" type="tel" placeholder="Номер телефона" required>
+          <button class="form__button btn-reset">Сохранить</button>
+        </form>
+        <form class="modal">
+          <svg class="modal__arrow">
+            <use href="img/sprite.svg#arrow"></use>
+          </svg>
+          <img class="modal__dumpster" src="img/dumpster.svg" alt="Удалить">
+          <div class="modal__avatar"></div>
+          <input class="modal__name" id="modal-name"></input>
+          <input class="modal__number" id="modal-number"></input>
+          <div class="modal__inner-category">
+            <span class="modal__descr">Категория:</span>
+            <select class="modal__category">
+              <option class="modal__option">Друзья</option>
+              <option class="modal__option">Менторы</option>
+            </select>
+          </div>
+          <div class="modal__inner-chosen">
+            <span class="modal__descr">Избранный контакт:</span>
+            <div class="modal__not-elected"></div>
+          </div>
+          <button class="modal__button btn-reset">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
