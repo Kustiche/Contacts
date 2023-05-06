@@ -5,4 +5,6 @@ export const list = document.querySelector('.contacts__list');
 export const modal = document.querySelector('.modal');
 export const modalArrow = document.querySelector('.modal__arrow');
 export const modalDumpster = document.querySelector('.modal__dumpster');
+export const modalName = document.getElementById('modal-name');
+export const modalNumber = document.getElementById('modal-number');
 export const contacts = document.querySelectorAll('.contacts__contact');
