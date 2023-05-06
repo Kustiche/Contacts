@@ -1,4 +1,5 @@
   import { phonebook } from "./phonebook.js";
+	import { render } from "./render.js";
 
 	export function addСontact(name, number, category, isFavorite) {
 	if (name === undefined || name === '') {
@@ -16,4 +17,5 @@
 		category: categoryContact,
 		isFavorite: isFavoriteContact
 	});
+	render();
 };
