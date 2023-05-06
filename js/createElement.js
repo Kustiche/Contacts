@@ -1,6 +1,6 @@
 import { list } from "./view.js";
 
-export function addDomContact(nameText, numberText) {
+export function createElement(nameText, numberText) {
   let newContact = document.createElement('div');
   let newAvatar = document.createElement('div');
   let newInner = document.createElement('div');
