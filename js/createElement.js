@@ -25,7 +25,6 @@ export function createElement(nameText, numberText) {
 
   newNumber.classList.add('contacts__number');
   newInner.append(newNumber);
-  newNumber.prepend('+');
   newNumber.append(newNumberText);
 
   newSvg.classList.add('contacts__not-elected')
