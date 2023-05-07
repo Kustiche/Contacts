@@ -9,6 +9,7 @@ export function createElement(nameText, numberText) {
   let newNumber = document.createElement('span');
   let newNumberText = document.createTextNode(numberText);
   let newSvg = document.createElement('div');
+  const isNumberOperator = numberText.includes('+');
 
   newContact.classList.add('contacts__contact')
   list.prepend(newContact);
@@ -25,6 +26,9 @@ export function createElement(nameText, numberText) {
 
   newNumber.classList.add('contacts__number');
   newInner.append(newNumber);
+  if (!isNumberOperator) {
+    newNumber.prepend('+');
+  }
   newNumber.append(newNumberText);
 
   newSvg.classList.add('contacts__not-elected')

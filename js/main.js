@@ -1,13 +1,17 @@
-import { formName, formNumber, form, list, modal, modalName } from "./view.js";
+import { formName, formNumber, form, list, modal, modalName, modalCategory } from "./view.js";
 import { addСontact } from "./addContact.js";
 import { openModal } from "./openModal.js";
 import { changeFavorite } from "./changeFavorite.js";
 import { changeDataContact } from "./changeDataContact.js";
+import { changeCategory } from "./changeCategory.js";
 
 let name = '';
 
 formNumber.addEventListener('click', () => {
-  formNumber.value = '+';
+  const isFormNumberOperator = formNumber.value.includes('+');
+  if (!isFormNumberOperator) {
+    formNumber.value = '+';
+  };
 });
 
 form.addEventListener('submit', (event) => {
@@ -25,8 +29,13 @@ modalName.addEventListener('click', () => {
   name = modalName.value;
 });
 
+modalCategory.addEventListener('click', () => {
+  name = modalName.value;
+});
+
 modal.addEventListener('submit', (event) => {
   event.preventDefault();
 
   changeDataContact(name);
+  changeCategory(name);
 })

@@ -8,5 +8,6 @@ export const modalArrow = document.querySelector('.modal__arrow');
 export const modalDumpster = document.querySelector('.modal__dumpster');
 export const modalElected = document.querySelector('.modal__not-elected');
 export const modalAvatar = document.querySelector('.modal__avatar');
+export const modalCategory = document.querySelector('.modal__category');
 export const modalName = document.getElementById('modal-name');
 export const modalNumber = document.getElementById('modal-number');
