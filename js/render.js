@@ -7,7 +7,7 @@ export function render() {
   list.textContent = '';
 
   phonebook.forEach((contact) => {
-    createElement(contact.name, contact.number);
+    createElement(contact.name, contact.number, contact.isFavorite);
 
     showContactAvatar(contact.name);
   });

@@ -12,8 +12,9 @@ export function openModal(event) {
     const contactNumber = contact.querySelector('.contacts__number');
     const arrayContact = phonebook.find((contact) => contact.name === contactName.textContent);
     const contactCategory = arrayContact.category;
+    const contactFavorite = arrayContact.isFavorite
 
     modal.classList.add('open-modal');
-    renderModal(contactName.textContent, contactNumber.textContent, contactCategory);
+    renderModal(contactName.textContent, contactNumber.textContent, contactCategory, contactFavorite);
   };
 };

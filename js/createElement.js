@@ -1,6 +1,6 @@
 import { list } from "./view.js";
 
-export function createElement(nameText, numberText) {
+export function createElement(nameText, numberText, favorite) {
   let newContact = document.createElement('div');
   let newAvatar = document.createElement('div');
   let newInner = document.createElement('div');
@@ -8,7 +8,7 @@ export function createElement(nameText, numberText) {
   let newNameText = document.createTextNode(nameText);
   let newNumber = document.createElement('span');
   let newNumberText = document.createTextNode(numberText);
-  let newSvg = document.createElement('div');
+  let newFavorite = document.createElement('div');
   const isNumberOperator = numberText.includes('+');
 
   newContact.classList.add('contacts__contact')
@@ -31,6 +31,10 @@ export function createElement(nameText, numberText) {
   }
   newNumber.append(newNumberText);
 
-  newSvg.classList.add('contacts__not-elected')
-  newContact.append(newSvg);
+  if (favorite) {
+    newFavorite.classList.add('contacts__not-elected', 'elected');
+  }else {
+    newFavorite.classList.add('contacts__not-elected');
+  };
+  newContact.append(newFavorite);
 };
