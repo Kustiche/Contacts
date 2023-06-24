@@ -1,1 +1,1 @@
-export const phonebook = [];
+export let phonebook = JSON.parse(localStorage.getItem('phonebook')) ?? [];

@@ -1,21 +1,27 @@
   import { phonebook } from "./phonebook.js";
 	import { render } from "./render.js";
 
+	function Contact(name, number, category, isFavorite) {
+		this.name = name;
+		this.number = number;
+		this.category = category;
+		this.isFavorite = isFavorite;
+	};
+
 	export function addСontact(name, number, category, isFavorite) {
 	if (name === undefined || name === '') {
-		console.log('Контакт без имени создать нельзя');
+		alert('Контакт без имени создать нельзя');
 		return;
 	}else if (phonebook.find((contact) => contact.name === name)) {
-		console.log('Контакт с таким именем уже существует');
+		alert('Контакт с таким именем уже существует');
 		return;
 	};
 	const categoryContact = category || 'Без категории';
 	const isFavoriteContact = isFavorite || false;
-  phonebook.push({
-		name,
-		number,
-		category: categoryContact,
-		isFavorite: isFavoriteContact
-	});
+	let contact = new Contact(name, number, categoryContact, isFavoriteContact);
+
+  phonebook.push(
+		contact
+	);
 	render();
 };

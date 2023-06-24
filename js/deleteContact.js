@@ -10,5 +10,6 @@ export function deleteContact(name) {
     modal.classList.remove('open-modal');
 
     render();
+    localStorage.setItem('phonebook', JSON.stringify(phonebook));
   });
 };

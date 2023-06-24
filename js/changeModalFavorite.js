@@ -10,12 +10,10 @@ export function changeModalFavorite() {
       contact.isFavorite = false;
       modalFavorite.classList.remove('elected');
       render();
-      console.log(phonebook);
     }else {
       contact.isFavorite = true;
       modalFavorite.classList.add('elected');
       render();
-      console.log(phonebook);
     };
   });
 };
