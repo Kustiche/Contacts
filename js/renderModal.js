@@ -1,6 +1,5 @@
 import { modalName, modalNumber, modalCategory, modalFavorite } from "./view.js";
 import { hiddenModal } from "./hiddenModal.js";
-import { deleteContact } from "./deleteContact.js";
 import { showModalAvatar } from "./showModalAvatar.js";
 import { changeModalFavorite } from "./changeModalFavorite.js";
 
@@ -16,7 +15,6 @@ export function renderModal(name, number, category, favorite) {
   };
 
   hiddenModal();
-  deleteContact(name);
   showModalAvatar();
   changeModalFavorite();
 };

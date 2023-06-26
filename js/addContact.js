@@ -20,8 +20,12 @@
 	const isFavoriteContact = isFavorite || false;
 	let contact = new Contact(name, number, categoryContact, isFavoriteContact);
 
-  phonebook.push(
-		contact
-	);
+  phonebook.push({
+		name: contact.name,
+		number: contact.number,
+		category: contact.category,
+		isFavorite: contact.isFavorite
+	});
+
 	render();
 };
